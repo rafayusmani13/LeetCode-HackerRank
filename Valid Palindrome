@@ -1,0 +1,24 @@
+# Runtime: 608 ms
+# Memory: 14.8 mb
+# Difficulty: Easy
+
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        s = s.replace(' ', '')
+        for ch in s:
+            if not (ch.isalpha() or ch.isnumeric()):
+                s = s.replace(ch , '')
+        rev = s[::-1]
+        count = 0
+        out = True
+        while count != len(s):
+            if rev[count].lower() == s[count].lower():
+                out = True
+                count += 1
+            else:
+                return False
+        return out
