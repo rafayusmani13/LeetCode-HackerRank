@@ -1,0 +1,17 @@
+# Runtime: 24 ms
+# Memory: 13.6 MB
+# Difficulty: Easy
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        ans = []
+        first = 0
+        
+        while first <= len(nums) - 1:
+            find = target - nums[first]
+            if (find in nums) and (nums.index(find) != first):
+                ans.append(first)
+                ans.append(nums.index(find))
+                return ans
+            else:
+                first += 1
