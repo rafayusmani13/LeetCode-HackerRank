@@ -1,0 +1,15 @@
+# Runtime: 10 ms
+# Difficulty: Easy
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    nums = list(arr)
+    myList = nums.copy()
+    myList.sort()
+    myList = myList[::-1]
+    ind = 1
+    
+    while myList[ind] == myList[0]:
+        ind += 1
+    print(myList[ind])
