@@ -1,0 +1,12 @@
+# Runtime: 4 ms (faster than 100% of submissions)
+# Memory: 13.8 mb
+# Difficulty: Medium
+
+class Solution(object):
+    def reverseWords(self, s):
+        words = s.split(' ')[::-1]
+        result = ''
+        for word in words:
+            if word.isalnum():
+                result += word + ' '
+        return result[:-1]
