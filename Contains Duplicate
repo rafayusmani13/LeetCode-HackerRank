@@ -1,0 +1,17 @@
+# Runtime: 104 ms
+# Memory: 19.2 mb
+# Difficulty: Easy
+
+class Solution(object):
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        occ = {}
+        for num in nums:
+            if num in occ:
+                return True
+            else:
+                occ[num] = 1
+        return False
