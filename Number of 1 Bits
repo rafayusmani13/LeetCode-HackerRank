@@ -1,0 +1,16 @@
+# Runtime: 28 ms
+# Memory: 13.6 mb
+# Difficulty: Easy
+
+class Solution(object):
+    def hammingWeight(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        n = bin(n)[2:]
+        numCount = 0
+        for num in n:
+            if num == '1':
+                numCount += 1
+        return numCount
